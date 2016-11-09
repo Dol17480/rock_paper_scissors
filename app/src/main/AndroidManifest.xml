@@ -8,6 +8,30 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity
+            android:name=".MoveActivity"
+            android:label="RockPaperScissors">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ResultActivity"
+            android:label="And the winner is ...."
+            android:parentActivityName=".MoveActivity">
+
+            </activity>
+
+
+
+
     </application>
+
+
+
 
 </manifest>
