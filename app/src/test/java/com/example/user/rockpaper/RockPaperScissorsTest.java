@@ -39,4 +39,15 @@ public class RockPaperScissorsTest {
         assertEquals(true, results.contains(result));
     }
 
+    @Test
+    public void canGetWinCount() {
+        game = new RockPaperScissors("rock");
+        game.result();
+        game = new RockPaperScissors("rock");
+        game.result();
+        game = new RockPaperScissors("rock");
+        game.result();
+        assertEquals(true, RockPaperScissors.getWinCount() > 0 );
+    }
+
 }

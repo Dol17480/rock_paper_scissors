@@ -12,6 +12,7 @@ public class RockPaperScissors {
     private String mMove;
     private String mComputerMove;
     private HashMap<String, String> mWinLookUp;
+    protected static int winCount = 0;
 
     public RockPaperScissors(String move) {
 
@@ -29,10 +30,20 @@ public class RockPaperScissors {
         return mComputerMove;
     }
 
+    public static int getWinCount() {
+        return winCount;
+    }
+
+    public String result() {
+        String result = String.format("Your move: %s. Computer move: %s.%n You %s", mMove, mComputerMove, winChecker());
+        return result;
+    }
+
     public String winChecker() {
         String result = "";
         if (mWinLookUp.get(mMove).equals(mComputerMove)) {
             result += "win";
+            winCount++;
         } else if (mWinLookUp.get(mComputerMove).equals(mMove)) {
             result += "lose";
         } else {

@@ -1,29 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/colorAccent">
 
 
-
+    <TextView
+        android:id="@+id/move_text"
+        android:textSize="40dp"
+        android:text="Choose Your Move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/white" />
 
 
     <Button
         android:id="@+id/scissors_button"
         android:text="Scissors"
+        android:textSize="30dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"
+        android:background="@android:color/white"
+        android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/rock_button"
         android:text="Rock"
+        android:textSize="30dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"
+        android:background="@android:color/white"
+        android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/paper_button"
         android:text="Paper"
+        android:textSize="30dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"
+        android:background="@android:color/white"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/win_count_text"
+        android:textSize="20dp"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="30dp"/>
 
 
 
