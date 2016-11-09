@@ -16,10 +16,29 @@ public class RockPaperScissors {
     public RockPaperScissors(String move) {
 
         mMove = move;
-        mComputerMove = getComputerMove();
+        mComputerMove = setComputerMove();
         mWinLookUp = new HashMap<String, String>();
         setUpWinLookup();
+    }
 
+    public String getPlayerMove() {
+        return mMove;
+    }
+
+    public String getComputerMove() {
+        return mComputerMove;
+    }
+
+    public String winChecker() {
+        String result = "";
+        if (mWinLookUp.get(mMove).equals(mComputerMove)) {
+            result += "win";
+        } else if (mWinLookUp.get(mComputerMove).equals(mMove)) {
+            result += "lose";
+        } else {
+            result += "draw";
+        }
+        return result;
     }
 
     private void setUpWinLookup() {
@@ -29,7 +48,7 @@ public class RockPaperScissors {
         mWinLookUp.put("rock", "scissors");
     }
 
-    private String getComputerMove() {
+    private String setComputerMove() {
 
         String[] moves = {
 
@@ -42,8 +61,5 @@ public class RockPaperScissors {
         int randomNumber = rand.nextInt(3);
         return moves[randomNumber];
     }
-
-
-
 
 }
